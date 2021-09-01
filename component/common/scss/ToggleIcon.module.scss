@@ -1,0 +1,54 @@
+.toggle-icon {
+	position: absolute;
+	top:0;
+	right: 0;
+	height: 30px;
+	margin: 20px;
+	cursor: pointer;
+  span {
+	  position: relative;
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #666666;
+    margin: 5px 0;
+    transition: 0.3s ease;
+	border-radius: 5px;
+  }
+  span:after{
+	  content: '';    
+	  position: absolute;
+	  bottom:-10px;
+	  width: 30px;
+	  height: 4px;
+	  background-color: #666666;
+	  transition: 0.3s ease;
+	  border-radius: 5px;
+
+
+  }
+  span:before{
+	content: '';    
+	position: absolute;
+	bottom:-20px;
+	width: 30px;
+	height: 4px;
+	background-color: #666666;
+    transition: 0.3s ease;
+	border-radius: 5px;
+
+}
+  &.active {
+	  span{
+		transform: translate3d(0, 10px, 0) rotate(-45deg);
+
+	  }
+    span:after {
+		transform: translate3d(10px, 0px, 0) rotate(45deg);
+		opacity: 0;
+	}
+    span:before {
+		transform: translate3d(0, -20px, 0) rotate(90deg);
+    }
+  }
+}

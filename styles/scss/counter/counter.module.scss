@@ -1,0 +1,7 @@
+@import '/styles/common_mixin.module.scss';
+.counter-wrapper{
+	@include vFlexAlignCenter();
+	h1{
+		@include h1;
+	}
+}

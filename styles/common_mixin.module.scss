@@ -1,0 +1,57 @@
+//Color
+$font:#333333;
+$font2:#666666;
+$font3:#999999;
+$border:#e5e5e5;
+
+//Font Weight
+$regular:400;
+$medium:500;
+$bold:700;
+
+//Common Mixin
+@mixin flex {
+	display: flex;
+}
+@mixin flexCenter {
+	display: flex;
+	justify-content: center;
+}
+@mixin flexAlignCenter {
+	display: flex;
+	align-items: center;
+}
+@mixin flexMiddle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@mixin vFlex {
+	display: flex;
+	flex-direction: column;
+}
+@mixin vFlexCenter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+@mixin vFlexAlignCenter {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+@mixin vFlexMiddle {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin h1 {
+	font-size: 42px;
+	font-weight: $bold;
+	letter-spacing: -0.025em;
+	text-align: center;
+	margin: 64px;
+}
+	
