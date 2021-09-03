@@ -1,6 +1,5 @@
 import { useState } from "react";
 import SidebarMenu from "./SidebarMenu";
-import ToggleIcon from "./../common/toggleIcon";
 import ToggleIcon from "../common/toggleIcon";
 import styles from "./scss/sideBarMenu_container.module.scss";
 
