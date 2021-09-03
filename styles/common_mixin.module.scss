@@ -17,6 +17,22 @@ $bold:700;
 	display: flex;
 	justify-content: center;
 }
+@mixin flexSpaceBetween {
+	display: flex;
+	justify-content: space-between;
+}
+@mixin flexSpaceAround {
+	display: flex;
+	justify-content: space-Around;
+}
+@mixin flexStart {
+	display: flex;
+	justify-content: flex-start;
+}
+@mixin flexEnd {
+	display: flex;
+	justify-content: flex-End;
+}
 @mixin flexAlignCenter {
 	display: flex;
 	align-items: center;

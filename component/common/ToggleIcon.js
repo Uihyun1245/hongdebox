@@ -1,16 +1,10 @@
-import { useState } from "react";
 import styles from "./scss/ToggleIcon.module.scss";
 
-const ToggleIcon = ({id, handleSideBar}) => {
-  const [toggle, setToggle] = useState(true);
-  const handleToggle = () => {
-    setToggle(!toggle);
-	handleSideBar();
-  };
+const ToggleIcon = ({id,sideBarActive, handleToggle}) => {
   return (
     <div
-      className={`${styles["toggle-icon"]} ${!toggle ? styles["active"] : ""}`}
-	  onClick={handleToggle}
+      className={`${styles["toggle-icon"]} ${sideBarActive ? styles["active"] : ""}`}
+      onClick={handleToggle}
       id={id}
     >
       <span></span>

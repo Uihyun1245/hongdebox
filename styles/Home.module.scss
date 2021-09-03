@@ -1,5 +1,6 @@
+@import './common_mixin.module.scss';
 .container{
+  @include vFlexCenter;
   width: 100%;
   min-height: 100vh;
-  background-color: #fefefe;
 }

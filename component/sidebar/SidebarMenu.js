@@ -1,9 +1,9 @@
 import Link from 'next/link';
-const SidebarMenu = ({ menuName , url, styles , handleSideBar})=>{
+const SidebarMenu = ({ menuName , url, styles,handleToggle})=>{
 return(
 	<div className={styles['side-menu']}>
 		<Link href={url}>
-			<a onClick={handleSideBar}>{menuName}</a>
+			<a onClick={handleToggle}>{menuName}</a>
 		</Link>
 	</div>
 )

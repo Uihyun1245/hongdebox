@@ -1,6 +1,9 @@
+@import '/styles/common_mixin.module.scss';
 .todo-wrapper {
-	width: 100%;
+  @include vFlexMiddle;
+	width: 500px;
   .todo-inputGroup {
+    @include flexSpaceBetween;
     input {
       width: 300px;
       height: 40px;
