@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy-gh-pages": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add -f out/ && git checkout -b temp-for-deploy-gh-pages && git commit -m \"Deploy Next.js to gh-pages\" && git core/subtree split --prefix out -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages && git checkout main && git branch -D temp-for-deploy-gh-pages"
+    "deploy": "next build && next export && git add out/ && git commit -m \"Deploy gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
     "gh-pages": "^3.2.3",
@@ -23,6 +23,7 @@
     "sass-loader": "^12.1.0"
   },
   "devDependencies": {
+    "babel-plugin-transform-define": "^2.0.0",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0"
   }
