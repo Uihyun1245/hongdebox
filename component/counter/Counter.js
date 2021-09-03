@@ -1,4 +1,4 @@
-import { useSpring, animated, useSprings } from 'react-spring';
+import { useSpring, animated } from 'react-spring';
 import styles from './scss/counter.module.scss';
 
 
