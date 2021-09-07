@@ -3,21 +3,28 @@ import SidebarMenu from "./SidebarMenu";
 import ToggleIcon from "../common/ToggleIcon";
 import styles from "./scss/sideBarMenu_container.module.scss";
 import { useSelector, useDispatch } from "react-redux";
-import { toggle } from "../../module/common/toggleIcon";
+import { toggle, setCurrentMenu } from "../../module/common/toggleIcon";
 const SideBarContainer = () => {
   const dispatch = useDispatch();
   const sideMenuList = [
     { id: 1, menuName: "Home", url: "/" },
     { id: 2, menuName: "Counter", url: "/counter" },
     { id: 3, menuName: "Todo List", url: "/todos" },
+    { id: 4, menuName: "Instagram Cloning", url: "/insta" },
   ];
+  // const [currentMenu, setcurrentMenu] = useState(1);
 
   const sideBarActive = useSelector((state) => {
     return state.toggleIcon.active;
   });
 
-  const handleToggle = () => {
+  const handleToggle = (id) => {
+    console.log(id);
     dispatch(toggle());
+    if(typeof id == 'number'){
+      dispatch(setCurrentMenu(id));
+
+    }
   };
 
   return (
@@ -36,7 +43,7 @@ const SideBarContainer = () => {
           menuName={sideMenu.menuName}
           url={sideMenu.url}
           styles={styles}
-          handleToggle={handleToggle}
+          handleToggle={()=>handleToggle(sideMenu.id)}
           key={`sideMenu${sideMenu.id}`}
         ></SidebarMenu>
       ))}

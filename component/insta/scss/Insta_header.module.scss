@@ -1,0 +1,38 @@
+@import './Insta.module.scss';
+@import "/styles/common_mixin.module.scss";
+.header-wrapper {
+	@include flexCenter;
+	width: 100%;
+	border-bottom: 1px solid $border;
+  .header-container {
+	  @include flexSpaceBetween;
+	  align-items: center;
+	  width: 934px;
+	  height: 64px;
+    .logo {
+      img {
+      }
+    }
+    .nav-search {
+      input {
+		  width: 212px;
+		  height: 24px;
+		  border: 1px solid $border;
+		  background-color: $bgColor;
+		}
+    }
+    .menu-list { 
+      ul {
+		  @include flexCenter;
+        li {
+          a {
+            img {
+				width: 22px;
+				height: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
