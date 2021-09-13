@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAA;EACR,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;CACb",
+    "sources": [
+        "Mainbox.module.scss"
+    ],
+    "names": [],
+    "file": "Mainbox.module.css"
+}

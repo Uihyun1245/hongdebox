@@ -26,7 +26,6 @@ const Todos = ({
 }) => {
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(input);
     onInsert(input);
     onChangeInput("");
   };

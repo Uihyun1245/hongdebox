@@ -18,7 +18,6 @@ function MyApp({ Component, pageProps }) {
   ):(
     <Component {...pageProps} />
   );
-  console.log(getLayout);
   return (
     <div className="wrapper">
       <Provider store={store}>

@@ -10,12 +10,10 @@ const CounterContainer = ()=>{
 	const dispatch = useDispatch();
 
 	const  onIncrease = ()=>{
-		console.log('Increase');
 		dispatch(increase());
 	}
 
 	const onDecrease = ()=>{
-		console.log('Decrease');
 		dispatch(decrease());
 	}
 

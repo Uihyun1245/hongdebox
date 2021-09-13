@@ -2,6 +2,7 @@
 $font:#333333;
 $font2:#666666;
 $font3:#999999;
+$font4:#8e8e8e;
 
 $border:#e5e5e5;
 
@@ -36,6 +37,7 @@ $bold:700;
 }
 @mixin flexAlignCenter {
 	display: flex;
+	justify-content: center;
 	align-items: center;
 }
 @mixin flexMiddle {

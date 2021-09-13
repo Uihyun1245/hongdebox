@@ -1,34 +1,75 @@
-@import './Insta.module.scss';
+@import "./Insta.module.scss";
 @import "/styles/common_mixin.module.scss";
 .header-wrapper {
-	@include flexCenter;
-	width: 100%;
-	border-bottom: 1px solid $border;
+  @include flexCenter;
+  width: 100%;
+  border-bottom: 1px solid $border;
   .header-container {
-	  @include flexSpaceBetween;
-	  align-items: center;
-	  width: 934px;
-	  height: 64px;
+    @include flexSpaceBetween;
+    align-items: center;
+    width: 934px;
+    height: 64px;
     .logo {
       img {
       }
     }
     .nav-search {
-      input {
-		  width: 212px;
-		  height: 24px;
-		  border: 1px solid $border;
-		  background-color: $bgColor;
-		}
+      @include flexAlignCenter;
+      width: 212px;
+      height: 24px;
+      border: 1px solid $border;
+      background-color: $bgColor;
+      .search-idle { 
+        @include flexAlignCenter;
+        width: 100%;
+        img {
+          width: 12px;
+          height: 12px;
+          filter: grayscale(100%);
+          margin-right: 8px;
+        }
+        span {
+          font-size: 14px;
+          color:$font4;
+        }
+      }
+      .search-active{
+        display: none;
+      }
+      .search-focus{
+        display: none;
+        align-items: center;
+        input{
+          width: 180px;
+          height: 20px;
+          border: none;
+          background-color: $bgColor;
+        }
+        input:focus{
+          outline: none;
+        }
+        .search-cancel{
+          cursor: pointer;
+          img{
+            width: 12px;
+            height: 12px;
+            object-fit: cover;
+          }
+        }
+      }
+      .focus-active{
+        @include flexSpaceAround;
+      }
     }
-    .menu-list { 
+    .menu-list {
       ul {
-		  @include flexCenter;
+        @include flexCenter;
         li {
+          margin-left: 24px;
           a {
             img {
-				width: 22px;
-				height: 22px;
+              width: 22px;
+              height: 22px;
             }
           }
         }

@@ -1,13 +1,44 @@
-import styles from './scss/Insta_header.module.scss';
-const InstaHeader = () => { 
+import { useSelector, useDispatch } from "react-redux";
+import styles from "./scss/Insta_header.module.scss";
+import { searchReady } from "../../module/insta/header/search";
+const InstaHeader = () => {
+  const searchActive = useSelector((state) => state.headerSearch.active);
+  const dispatch = useDispatch();
+  const handleSearchActive = (input) => {
+    dispatch(searchReady(input));
+  };
   return (
-    <div className={styles["header-wrapper"]}> 
+    <div className={styles["header-wrapper"]}>
       <div className={styles["header-container"]}>
         <div className={styles["logo"]}>
           <img src="/images/insta/header/insta_logo.png" alt="instagram logo" />
         </div>
         <div className={styles["nav-search"]}>
-          <input type="text" />
+          <div
+            className={`${styles["search-idle"]} ${
+              searchActive ? styles["search-active"] : ""
+            }`}
+            onClick={() => handleSearchActive(true)}
+          >
+            <img
+              src="/images/insta/header/magnifying-glass.png"
+              alt="search icon"
+            />
+            <span>검색</span>
+          </div>
+          <div
+            className={`${styles["search-focus"]} ${
+              searchActive ? styles["focus-active"] : ""
+            }`}
+          >
+            <input type="text" />
+            <div
+              className={styles["search-cancel"]}
+              onClick={() => handleSearchActive(false)}
+            >
+              <img src="./images/insta/header/cancel.png" alt="cancel icon" />
+            </div>
+          </div>
         </div>
         <div className={styles["menu-list"]}>
           <ul>

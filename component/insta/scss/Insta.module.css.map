@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,kBAAkB,CAAA;EACjB,KAAK,EAAE,KAAK;EACZ,UAAU,EAAE,KAAK;CACjB",
+    "sources": [
+        "Insta.module.scss"
+    ],
+    "names": [],
+    "file": "Insta.module.css"
+}

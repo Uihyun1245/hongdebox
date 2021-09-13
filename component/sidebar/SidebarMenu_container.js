@@ -19,7 +19,6 @@ const SideBarContainer = () => {
   });
 
   const handleToggle = (id) => {
-    console.log(id);
     dispatch(toggle());
     if(typeof id == 'number'){
       dispatch(setCurrentMenu(id));

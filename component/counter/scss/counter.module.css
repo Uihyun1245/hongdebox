@@ -1,0 +1,46 @@
+.counter-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.counter-wrapper h1 {
+  display: block;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 30px;
+  text-decoration: underline;
+}
+
+.counter-wrapper .count-effect {
+  font-size: 50px;
+}
+
+@keyframes countEffect {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+.counter-wrapper .counterBtn-group button {
+  font-size: 28px;
+  background-color: transparent;
+  border: 1px solid #e5e5e5;
+  border-radius: 20px;
+  padding: 5px 20px;
+  margin: 10px;
+  cursor: pointer;
+  transition: .3s ease;
+  color: #777777;
+}
+
+.counter-wrapper .counterBtn-group button:active {
+  background-color: #a9a9a9;
+  color: #232323;
+}
+/*# sourceMappingURL=counter.module.css.map */
