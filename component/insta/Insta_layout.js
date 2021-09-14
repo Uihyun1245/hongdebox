@@ -7,8 +7,8 @@ const InstaLayout = ({}) => {
   const dispatch = useDispatch();
   const handleSearchActive = (input, e) => {
     e.stopPropagation();
-	e.preventDefault();
-	if(e.target!==e.currentTarget) return;
+    e.preventDefault();
+    if (e.target !== e.currentTarget) return;
     dispatch(searchReady(input));
   };
 

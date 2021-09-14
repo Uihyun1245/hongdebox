@@ -2,7 +2,7 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import rootReducer from "../module/rootReducer";
-import SideBarContainer from "../component/sidebar/SidebarMenu_container";
+import SideBarContainer from "../component/common/sidebar/SidebarMenu_container";
 
 import "../styles/globals.css";
 

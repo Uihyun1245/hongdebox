@@ -1,0 +1,62 @@
+@import '/styles/scss/pandac/pandac_common.module.scss';
+
+.intro-section {
+  width: 1296px;
+  margin: 64px 0 204px;
+  .intro-title {
+    text-align: center;
+    margin-bottom: 204px;
+    strong {
+      @include strong;
+    }
+    h1 {
+      @include h1;
+      margin-top: 64px;
+      line-height: 61px;
+    }
+  }
+  .intro-body {
+    width: 100%;
+    .introBox-group {
+      @include flexSpaceBetween;
+      width: 100%;
+      .intro-box {
+        @include vFlex;
+        justify-content: space-between;
+        width: 568px;
+        height: 655px;
+        background-color: #fefefe;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        text-align: center;
+        .box-text {
+          margin-top: 42px;
+          strong {
+            @include strong;
+            font-size: 30px;
+          }
+          .text-group {
+            @include vFlex;
+            justify-content: center;
+            height: 100px;
+            margin-top: 42px;
+            p {
+              @include text;
+              margin-bottom: 8px;
+            }
+          }
+        }
+        .box-img {
+          height: 381px;
+          img {
+            width: 568px;
+            height: 381px;
+            object-fit: cover;
+            user-select: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import '/styles/scss/pandac/pandac_common.module.scss';
+.header {
+    @include flexSpaceBetween;
+    align-items: center;
+    height: 64px;
+    width: 1296px;
+    margin:0 auto;
+    .logo-container {
+      img {
+        width: 154px;
+        height: 45px;
+		object-fit: contain;
+      } 
+    }
+    .menu-container {
+      .menu-list {
+        @include flexCenter;
+        li {
+          font-size: 16px;
+          font-weight: $medium;
+          letter-spacing: -0.025em;
+          margin-left: 56px;
+          color: $textColor;
+        }
+      }
+    }
+  }
