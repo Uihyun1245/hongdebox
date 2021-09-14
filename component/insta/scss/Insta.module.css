@@ -1,5 +1,7 @@
 .instagram-wrapper {
+  position: relative;
   width: 100vw;
   min-height: 100vh;
+  margin-top: 65px;
 }
 /*# sourceMappingURL=Insta.module.css.map */

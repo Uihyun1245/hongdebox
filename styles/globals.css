@@ -156,6 +156,7 @@ body {
   color:#333333;
   overflow-x: hidden;
   width: 100%;
+  box-sizing: content-box;
 }
 ol,
 ul {
