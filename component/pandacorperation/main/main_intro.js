@@ -22,7 +22,7 @@ const MainIntro = () => {
               </div>
             </div>
             <div className={styles["box-img"]}>
-              <img src="./images/main/main_box.jpg" alt="메인 박스이미지" />
+              <img src="/images/pandac/main/main_box.jpg" alt="메인 박스이미지" />
             </div>
           </div>
           <div className={styles["intro-box"]}>
@@ -34,7 +34,7 @@ const MainIntro = () => {
               </div>
             </div>
             <div className={styles["box-img"]}>
-              <img src="./images/main/main_box2.jpg" alt="메인 박스이미지" />
+              <img src="/images/pandac/main/main_box2.jpg" alt="메인 박스이미지" />
             </div>
           </div>
         </div>

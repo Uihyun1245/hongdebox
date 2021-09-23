@@ -5,8 +5,9 @@
   margin: 64px 0 204px;
   .intro-title {
     text-align: center;
-    margin-bottom: 204px;
+    margin:72px 0 204px;
     strong {
+      font-family: 'Roboto';
       @include strong;
     }
     h1 {
@@ -27,8 +28,7 @@
         height: 655px;
         background-color: #fefefe;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
+        border-radius: 20px;
         text-align: center;
         .box-text {
           margin-top: 42px;
@@ -54,6 +54,8 @@
             height: 381px;
             object-fit: cover;
             user-select: none;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
           }
         }
       }

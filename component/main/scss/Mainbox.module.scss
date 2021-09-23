@@ -1,4 +1,24 @@
-.main-box{
-	width: 600px;
-	height: 300px;
+.main-box {
+  width: 600px;
+  height: 300px;
+  border-color: wheat;
+  .canvas{
+	height: 250px;
+	margin: 0 auto;
+	perspective: 2000px;
+	perspective-origin: center center;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 250px;
+  }
+  
+  .point{
+	background: #E87A24;
+	border-radius: 50%;
+	height: 4px;
+	position: absolute;
+	transform-style: preserve-3d;
+	width: 4px;
+  }
 }

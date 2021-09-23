@@ -1,0 +1,16 @@
+@import "/styles/scss/pandac/pandac_common.module.scss";
+
+.banner-section {
+  @include flexAlignCenter;
+  width: 100%;
+  height: 376px;
+  background-color: #ecfffd;
+  text-align: center;
+  @include h3;
+  font-weight: $medium;
+  span {
+    color: $pandaColor;
+    font-size: 32px;
+	font-weight: $bold;
+  }
+}
