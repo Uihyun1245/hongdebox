@@ -1,0 +1,79 @@
+@import '/styles/scss/pandac/pandac_common.module.scss';
+.service-section{
+	@include section;
+	h3 {
+		@include h3;
+		font-weight: $bold;
+		margin-bottom: 32px;
+	  }
+	  .service-group {
+		.serviceBox-group {
+		  @include flexSpaceBetween;
+		  .service-box {
+			padding: 24px 0 94px;
+			border-top: 1px solid $borderColor;
+			width: 45%;
+			.serviceBox-title {
+			  margin-bottom: 33px;
+			  h2 {
+				@include h2;
+				font-size: 30px;
+				line-height: 48px;
+			  }
+			  span {
+				font-size: 20px;
+				font-weight: $medium;
+				letter-spacing: -0.025em;
+			  }
+			}
+			.serviceBox-body {
+			  margin-bottom: 90px;
+			  p {
+				@include text;
+				width: 50ch;
+			  }
+			}
+			.serviceBox-footer {
+			  @include flexSpaceBetween;
+			  .serviceBox-img {
+				img {
+				  width: 190px;
+				  height: 50px;
+				  object-fit: contain;
+				  object-position: left;
+				}
+			  }
+			  .serviceBox-link {
+			  }
+			}
+		  }
+		}
+		.serviceBox-group:nth-of-type(1) {
+		  .service-box:nth-of-type(1) {
+			span {
+			  color: $pandaColor;
+			}
+		  }
+		  .service-box:nth-of-type(2) {
+			span {
+			  color: $cueatColor;
+			}
+		  }
+		}
+		.serviceBox-group:nth-of-type(2) {
+		  .service-box {
+			border-bottom: 1px solid $borderColor;
+		  }
+		  .service-box:nth-of-type(1) {
+			span {
+			  color: $yellowmentColor;
+			}
+		  }
+		  .service-box:nth-of-type(2) {
+			span {
+			  color: $agripaColor;
+			}
+		  }
+		}
+	  }
+}
