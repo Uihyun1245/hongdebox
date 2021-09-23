@@ -10,7 +10,7 @@ const SideBarContainer = () => {
     { id: 2, menuName: "Counter", url: "/counter" },
     { id: 3, menuName: "Todo List", url: "/todos" },
     { id: 4, menuName: "Instagram Cloning", url: "/insta" },
-    { id: 5, menuName: "Panda Coperation", url: "/pandac" },
+    { id: 5, menuName: "Pandac Coperation", url: "/pandac" },
   ];
   // const [currentMenu, setcurrentMenu] = useState(1);
 

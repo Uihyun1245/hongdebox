@@ -1,6 +1,6 @@
 const TOGGLE_MENU = "toggle/TOGGLE_MENU";
 const CURRENT_MENU = "toggle/CURRENT_MENU";
-
+const MENU_CLOSE = "toggle/MENU_CLOSE";
 export const toggle = () => ({
   type: TOGGLE_MENU,
 });
@@ -8,6 +8,10 @@ export const toggle = () => ({
 export const setCurrentMenu = (id) => ({
   type: CURRENT_MENU,
   currentMenu: id,
+});
+
+export const menuClose = () => ({
+  type: MENU_CLOSE,
 });
 
 const initalState = {
@@ -26,6 +30,11 @@ const toggleMenu = (state = initalState, action) => {
       return{
         ...state,
         currentMenu: action.currentMenu
+      }
+    case MENU_CLOSE:
+      return{
+        ...state,
+        active: false
       }
     default:
       return state;
