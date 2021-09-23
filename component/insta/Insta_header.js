@@ -1,8 +1,8 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import styles from "./scss/Insta_header.module.scss";
-import { searchReady } from "../../module/insta/header/search";
-const InstaHeader = ({handleSearchActive}) => {
+const InstaHeader = ({ handleSearchActive }) => {
   const searchActive = useSelector((state) => state.headerSearch.active);
+
   return (
     <div className={styles["header-wrapper"]}>
       <div className={styles["header-container"]}>
@@ -14,7 +14,7 @@ const InstaHeader = ({handleSearchActive}) => {
             className={`${styles["search-idle"]} ${
               searchActive ? styles["search-active"] : ""
             }`}
-            onClick={(e) => handleSearchActive(true,e)}
+            onClick={(e) => handleSearchActive(true, e)}
           >
             <img
               src="/images/insta/header/magnifying-glass.png"
@@ -30,7 +30,7 @@ const InstaHeader = ({handleSearchActive}) => {
             <input type="text" />
             <div
               className={styles["search-cancel"]}
-              onClick={(e) => handleSearchActive(false,e)}
+              onClick={(e) => handleSearchActive(false, e)}
             >
               <img src="./images/insta/header/cancel.png" alt="cancel icon" />
             </div>

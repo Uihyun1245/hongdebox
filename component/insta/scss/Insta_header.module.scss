@@ -3,16 +3,17 @@
 .header-wrapper {
   @include flexCenter;
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100%;
   border-bottom: 1px solid $border;
   z-index: 2;
+  background-color: #fefefe;
   .header-container {
     @include flexSpaceBetween;
     align-items: center;
     width: 934px;
-    height: 64px;
+    height: 54px;
     .logo {
       img {
       }
@@ -21,9 +22,11 @@
       @include flexAlignCenter;
       position: relative;
       width: 212px;
-      height: 24px;
+      height: 30px;
       border: 1px solid $border;
       background-color: $bgColor;
+      border-radius: 5px;
+
       .search-idle {
         @include flexAlignCenter;
         width: 100%;
@@ -33,6 +36,7 @@
           height: 12px;
           filter: grayscale(100%);
           margin-right: 8px;
+          pointer-events: none;
         }
         span {
           font-size: 14px;
@@ -67,38 +71,38 @@
       }
       .focus-active {
         @include flexSpaceAround;
-      }  
+      }
       .search-history {
         display: none;
         position: absolute;
-        bottom: -395px;
+        bottom: -388px;
         left: 50%;
         background-color: #fefefe;
-        transform: translate(-50%,0);
+        transform: translate(-50%, 0);
         z-index: 3;
-        border:  1px solid $border;
+        border: 1px solid $border;
         border-radius: 5px;
-        box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
         width: 365px;
         height: 375px;
         padding: 5px;
       }
       .search-history::before {
-        content: '';
+        content: "";
         position: absolute;
         background-color: #fefefe;
         border-top: 1px solid $border;
         border-right: 1px solid $border;
-        top:-11px;
-        left:50%;
+        top: -11px;
+        left: 50%;
         width: 20px;
         height: 20px;
         transform: rotateZ(-45deg);
       }
-      .search-history-active{
+      .search-history-active {
         display: block;
       }
-    } 
+    }
 
     .menu-list {
       ul {

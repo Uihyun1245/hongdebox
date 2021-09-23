@@ -1,8 +1,21 @@
-$bgColor:#FAFAFA;
+@import "/styles/scss/insta/insta_common.module.scss";
 
-.instagram-wrapper{
-	position: relative;
-	width: 100vw;
-	min-height: 100vh;
-	margin-top: 65px;
+.instagram-wrapper {
+  @include vFlexCenter;
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  margin-top: 54px;
+  padding-top:32px;
+  background-color: $bgColor;
+  .instagram-body {
+    @include flexSpaceBetween;
+    width: 935px;
+    min-width: 650px;
+    .instagram-content {
+    }
+    .instagram-profileList {
+      width: 40%;
+    }
+  }
 }

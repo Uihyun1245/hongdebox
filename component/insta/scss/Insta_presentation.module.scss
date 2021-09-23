@@ -1,0 +1,41 @@
+@import "/styles/scss/insta/insta_common.module.scss";
+.presentation {
+  @include flexStart;
+  width: 60%;
+  height: 118px;
+  background-color: $elementBgColor;
+  border: 1px solid $border;
+  border-radius: 5px;
+  padding: 16px;
+  .presentation-list {
+    @include flexStart;
+    align-items: center;
+    li {
+      @include vFlex;
+      margin-right: 16px;
+      .profile-img {
+		  @include flexAlignCenter;
+        border-radius: 50%;
+		width: 60px;
+		height: 60px;
+        background: linear-gradient(-45deg, #fb3958, #f7e600);
+        margin-bottom: 8px;
+        img {
+          @include flexAlignCenter;
+          position: relative;
+          width: 56px;
+          height: 56px;
+          object-fit: cover;
+          border-radius: 50%;
+          border: 2px solid #fefefe;
+        }
+      }
+      span {
+        font-size: 12px;
+        font-weight: $light;
+        color: #262626;
+		text-align: center;
+      }
+    }
+  }
+}

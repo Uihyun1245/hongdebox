@@ -1,8 +1,12 @@
-const SEARCH_READY="header/serach/SEARCH_READY";
-
+const SEARCH_READY = "header/search/SEARCH_READY";
+const CLOSE_SEARCH = "header/search/CLOSE_SEARCH"
 export const searchReady = activeState =>({
 	type:SEARCH_READY,
 	activeState
+})
+
+export const closeSearch = ()=>({
+	type:CLOSE_SEARCH,
 })
 
 const initialState = {
@@ -10,12 +14,16 @@ const initialState = {
 }
 
 const headerSearch = (state=initialState, action)=>{
-	console.log(action);
 	switch(action.type){
 		case SEARCH_READY:
 			return {
 				...state,
 				active: action.activeState
+			}
+		case CLOSE_SEARCH:
+			return{
+				...state,
+				active:false
 			}
 		default:
 			return state;
