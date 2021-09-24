@@ -2,3 +2,16 @@
 
 $elementBgColor:#fefefe;
 $bgColor: #fafafa;
+
+
+@mixin text {
+	color:#232323;
+	font-size: 14px;
+	font-weight: $regular;
+}
+
+@mixin text2 {
+	font-size: 12px;
+	font-weight: $light;
+	color: #262626;
+}

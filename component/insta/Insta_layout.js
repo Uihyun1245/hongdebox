@@ -1,6 +1,7 @@
-import styles from "./scss/Insta.module.scss";
+import styles from "./scss/Insta_layout.module.scss";
 import InstaHead from "./Insta_header";
-import InstaPresentation from "./Insta_presentation";
+import InstaPresentation from "./presentation/Insta_presentation";
+import InstaFeed from "./feed/Insta_feed"
 import { useDispatch } from "react-redux";
 import { searchReady } from "../../module/insta/header/search";
 import { menuClose } from "../../module/common/toggleIcon";
@@ -27,6 +28,7 @@ const InstaLayout = ({}) => {
       <div className={styles["instagram-body"]}>
         <div className={styles["instagram-content"]}>
           <InstaPresentation></InstaPresentation>
+          <InstaFeed></InstaFeed>
         </div>
         <div className={styles["instagram-profileList"]}></div>
       </div>
