@@ -1,0 +1,67 @@
+@import "/styles/scss/pandac/pandac_common.module.scss";
+
+.cueat-section {
+  @include section;
+  width: 1072px;
+  padding-top: 204px;
+  border-bottom: 1px solid $borderColor;
+  .cueat-title {
+    @include vFlex;
+    align-items: center;
+    margin-bottom: 204px;
+    h2 {
+      @include h2;
+      margin-bottom: 204px;
+    }
+    img {
+      width: 461px;
+      height: 313px;
+    }
+  }
+  .cueat-body {
+    .body-title {
+      @include title($cueatColor);
+    }
+    .body-content {
+      @include flexSpaceAround;
+      .content-text {
+        @include vFlex;
+        justify-content: space-between;
+        width: 40%;
+        height: 656px;
+        .text-box {
+          border-top: 1px solid $borderColor;
+          h3 {
+            @include h3;
+            margin: 20px 0 24px;
+          }
+          .boxText-group {
+            p {
+              @include text;
+            }
+          }
+        }
+        .linkBtn {
+          @include linkBtn($cueatColor);
+        }
+      }
+    }
+    .content-img {
+      @include flexEnd;
+      width: 60%;
+      .cueat-swiper {
+        @include flexCenter;
+        .cueat-slide {
+			@include flexEnd;
+          img {
+            width: 309px;
+            height: 656px;
+            object-fit: contain;
+            user-select: none;
+            -webkit-user-drag: none;
+          }
+        }
+      }
+    }
+  }
+}

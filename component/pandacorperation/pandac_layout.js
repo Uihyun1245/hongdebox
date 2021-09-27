@@ -1,10 +1,12 @@
 import { useSelector, useDispatch } from "react-redux";
 import { menuClose } from "../../module/common/toggleIcon";
-import PandacHeader from "./pandac_header";
+import PandacHeader from "./Pandac_header";
 import MainIntro from "./main/main_intro";
-import MainBanner from "./main/main_banner";
-import MainService from "./main/main_service";
-import styles from "./scss/pandac_layout.module.scss";
+import MainBanner from "./main/Main_banner";
+import MainService from "./main/Main_service";
+import MainPandac from "./main/Main_pandac";
+import MainCueat from "./main/Main_cueat";
+import styles from "./scss/Pandac_layout.module.scss";
 const PandacLayout = () => {
   const dispatch = useDispatch();
   const closeMenu = () => {
@@ -16,6 +18,8 @@ const PandacLayout = () => {
       <MainIntro></MainIntro>
       <MainBanner></MainBanner>
       <MainService></MainService>
+      <MainPandac></MainPandac>
+      <MainCueat></MainCueat>
     </div>
   );
 };
