@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { menuClose } from "../../module/common/toggleIcon";
 import PandacHeader from "./Pandac_header";
-import MainIntro from "./main/main_intro";
+import MainIntro from "./main/Main_intro";
 import MainBanner from "./main/Main_banner";
 import MainService from "./main/Main_service";
 import MainPandac from "./main/Main_pandac";
