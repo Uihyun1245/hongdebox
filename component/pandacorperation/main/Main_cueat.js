@@ -65,8 +65,7 @@ const MainCueat = () => {
             <Swiper
               className={styles["cueat-swiper"]}
               slidesPerView={1}
-              navigation={true}
-              resistanceRatio={0}
+              resistanceRatio={0} 
               // spaceBetween={50}
               // onSlideChange={() => console.log("slide change")}
               // onSwiper={(swiper) => console.log(swiper)}
