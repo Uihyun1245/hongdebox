@@ -1,4 +1,4 @@
-import PandacLayout from "/component/pandac/pandac_layout";
+import PandacLayout from "/component/pandac/Pandac_layout";
 import MainIntro from "/component/pandac/main/Main_intro";
 import MainBanner from "/component/pandac/main/Main_banner";
 import MainService from "/component/pandac/main/Main_service";
