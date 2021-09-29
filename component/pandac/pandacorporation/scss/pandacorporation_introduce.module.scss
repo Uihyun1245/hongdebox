@@ -1,0 +1,25 @@
+@import "/styles/scss/pandac/pandac_common.module.scss";
+
+.pandac-introduce {
+  width: 1296px;
+  margin-top: 72px;
+  h2 {
+    font-size: 30px;
+    font-weight: $bold;
+    padding-bottom: 32px;
+    border-bottom: 1px solid $borderColor;
+  }
+  h3 {
+    font-size: 18px;
+    font-weight: $medium;
+    line-height: 36px;
+    margin: 64px 0;
+  }
+  p {
+    width: 120ch;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: lighter;
+    color: $textColor;
+  }
+}

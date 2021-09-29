@@ -9,7 +9,7 @@ const MainService = () => {
           <div className={styles["service-box"]}>
             <div className={styles["serviceBox-title"]}>
               <h2>판다코퍼레이션</h2>
-              <span>Panda Coperation</span>
+              <span>Panda Corporation</span>
             </div>
             <div className={styles["serviceBox-body"]}>
               <p>
@@ -58,7 +58,7 @@ const MainService = () => {
           <div className={styles["service-box"]}>
             <div className={styles["serviceBox-title"]}>
               <h2>옐로먼트</h2>
-              <span>Yellowment</span>
+              <span>Yelloment</span>
             </div>
             <div className={styles["serviceBox-body"]}>
               <p>
@@ -69,7 +69,7 @@ const MainService = () => {
             <div className={styles["serviceBox-footer"]}>
               <div className={styles["serviceBox-img"]}>
                 <img
-                  src="/images/pandac/main/yellowment_logo.png"
+                  src="/images/pandac/main/yelloment_logo.png"
                   alt="옐로우먼트 로고"
                 />
               </div>

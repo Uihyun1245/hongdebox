@@ -1,10 +1,10 @@
 import styles from "./scss/main_intro.module.scss";
-
+ 
 const MainIntro = () => {
   return (
     <section className={styles["intro-section"]}>
       <div className={styles["intro-title"]}>
-        <strong>PANDA CORPERATION</strong>
+        <strong>PANDA CORPORATION</strong>
         <h1>
           기술과 농업의 결합 <br />
           차세대 농산물 유통시장을 만들어 갑니다.

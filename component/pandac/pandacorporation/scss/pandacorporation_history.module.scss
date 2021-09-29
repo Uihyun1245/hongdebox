@@ -1,0 +1,52 @@
+@import "/styles/scss/pandac/pandac_common.module.scss";
+
+.pandac-history {
+  @include flexStart;
+  width: 1296px;
+  margin-top: 144px;
+  .history-box {
+    @include vFlex;
+    align-items: flex-end;
+    position: relative;
+    width: 25%;
+    border-top: 1px solid $borderColor;
+    .history-title {
+      position: absolute;
+      top: -41px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      h2 {
+        font-size: 30px;
+        font-weight: $bold;
+      }
+    }
+    .history-title::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -16px;
+      transform: translate(-50%, 0);
+      width: 156px;
+      height: 5px;
+      background-color: green;
+    }
+    .history-body {
+      width: 234px;
+      padding: 56px 0;
+      .history {
+        @include flexStart;
+        margin-bottom: 16px;
+        span {
+          display: block;
+          margin-right: 16px;
+          font-size: 16px;
+          line-height: 24px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}

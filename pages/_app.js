@@ -13,16 +13,19 @@ const store = createStore(rootReducer, composeWithDevTools());
 function MyApp({ Component, pageProps }) {
   const getLayout = Component.Layout ? (
     <Component.Layout>
-        <Component {...pageProps} />
+      <Component { ...pageProps }/>
     </Component.Layout>
-  ):(
-    <Component {...pageProps} />
+  ) : (
+    <Component {...pageProps} >
+      {"asdfasfasdf"}
+      </Component>
   );
+
   return (
     <div className="wrapper">
       <Provider store={store}>
-          <SideBarContainer></SideBarContainer>
-          {getLayout}
+        <SideBarContainer></SideBarContainer>
+        {getLayout}
       </Provider>
     </div>
   );

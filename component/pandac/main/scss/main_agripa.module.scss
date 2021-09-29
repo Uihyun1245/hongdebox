@@ -1,0 +1,63 @@
+@import "/styles/scss/pandac/pandac_common.module.scss";
+
+
+.agripa-section{
+	@include section;
+	width: 1072px;
+	margin-top: 204px;
+	.agripa-title {
+	  @include title($agripaColor);
+	  img{
+		width: 150px;
+	  }
+	}
+	.agripa-body {
+	  @include flexSpaceBetween;
+	  .agripa-content {
+		@include vFlex;
+		justify-content: space-between;
+		width: 60%;
+		height: 665px;
+		.content-text {
+		  .text-group {
+			margin-bottom: 72px;
+			p {
+			  @include text;
+			}
+		  }
+		  .linkBtn {
+			@include linkBtn($agripaColor);
+		  }
+		}
+		.contentImg-group {
+		  @include flexSpaceBetween;
+		  .agripa-subSwiper {
+			.agripa-slide {
+			  @include flexEnd;
+			  img {
+				width: 172px;
+				height: 332px;
+				object-fit: contain;
+				user-select: none;
+				-webkit-user-drag: none;
+			  }
+			}
+		  }
+		}
+	  }
+	  .agripa-img {
+		width: 40%;
+		.agripa-swiper {
+		  .agripa-mainSlide {
+			img {
+			  width: 355px;
+			  height: 665px;
+			  object-fit: contain;
+			  user-select: none;
+			  -webkit-user-drag: none;
+			}
+		  }
+		}
+	  }
+	}
+}

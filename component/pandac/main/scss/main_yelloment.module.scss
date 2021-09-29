@@ -1,0 +1,61 @@
+@import "/styles/scss/pandac/pandac_common.module.scss";
+.yelloment-section {
+  @include section;
+  width: 1072px;
+  border-bottom: 1px solid $borderColor;
+  padding-top: 204px;
+  .yelloment-title {
+    @include title($yellomentColor);
+  }
+  .yelloment-body {
+    @include flexSpaceBetween;
+    .yelloment-content {
+      @include vFlex;
+      justify-content: space-between;
+      width: 60%;
+      height: 665px;
+      .content-text {
+        .text-group {
+          margin-bottom: 72px;
+          p {
+            @include text;
+          }
+        }
+        .linkBtn {
+          @include linkBtn($yellomentColor);
+        }
+      }
+      .contentImg-group {
+        @include flexSpaceBetween;
+        .yelloment-subSwiper {
+          .yelloment-slide {
+            @include flexEnd;
+            img {
+              width: 172px;
+              height: 332px;
+              object-fit: contain;
+              user-select: none;
+              -webkit-user-drag: none;
+            }
+          }
+        }
+      }
+    }
+    .yelloment-img {
+      @include flexCenter;
+      width: 40%;
+      .yelloment-swiper {
+        .yelloment-mainSlide {
+          @include flexStart;
+          img {
+            width: 355px;
+            height: 665px;
+            object-fit: contain;
+            user-select: none;
+            -webkit-user-drag: none;
+          }
+        }
+      }
+    }
+  }
+}
