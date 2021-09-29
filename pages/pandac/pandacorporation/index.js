@@ -1,7 +1,7 @@
-import PandacLayout from "/component/pandac/Pandac_layout";
-import PandacTopSection from "/component/pandac/Pandac_topSection";
-import PandacorporationIntroduce from "/component/pandac/pandacorporation/Pandacorporation_introduce";
-import PandacorporationHistory from "/component/pandac/pandacorporation/Pandacorporation_history";
+import PandacLayout from "../../../component/pandac/pandac_layout";
+import PandacTopSection from "../../../component/pandac/Pandac_topSection";
+import PandacorporationIntroduce from "../../../component/pandac/pandacorporation/Pandacorporation_introduce";
+import PandacorporationHistory from "../../../component/pandac/pandacorporation/Pandacorporation_history";
 import styles from "/styles/scss/pandac/pandacorporation/pandacorporation_main.module.scss";
 const Pandacorporation = () => {
   return (
