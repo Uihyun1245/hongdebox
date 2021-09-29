@@ -1,4 +1,4 @@
-import PandacLayout from "../../../component/pandac/pandac_layout";
+import PandacLayout from "../../../component/pandac/Pandac_layout";
 import PandacTopSection from "../../../component/pandac/Pandac_topSection";
 import PandacorporationIntroduce from "../../../component/pandac/pandacorporation/Pandacorporation_introduce";
 import PandacorporationHistory from "../../../component/pandac/pandacorporation/Pandacorporation_history";
