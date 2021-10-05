@@ -1,9 +1,0 @@
-@import '../../../styles/common_mixin.module.scss';
-
-.pandac-wrapper{
-	@include vFlexCenter;	
-	justify-content: center;
-	width: 100%;
-	background-color: #fdfdfd;
-	margin-top: 60px;
-}

@@ -1,0 +1,20 @@
+@import '/styles/scss/pandac/pandac_common.module.scss';
+.linkBtn-container {
+  @include vFlex;
+  align-items: center;
+  margin-top: 160px;
+  a {
+    @include flexCenter;
+    align-items: center;
+    width: 156px;
+    height: 54px;
+    border-radius: 20px;
+    color: #fefefe;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: $medium;
+  }
+  .cueat {
+    background-color: $cueatColor;
+  }
+}

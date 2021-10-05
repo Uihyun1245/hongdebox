@@ -1,0 +1,6 @@
+@import '../pandac_common.module.scss';
+
+.container{
+	@include vFlexCenter;
+	width: 100%;
+}

@@ -1,0 +1,16 @@
+@import "/styles/scss/pandac/pandac_common.module.scss";
+
+.serviceHead-wrapper {
+  width: 1296px;
+  border-bottom: 1px solid $borderColor;
+  padding-bottom: 32px;
+  margin-top: 96px;
+  .service-head {
+    @include flexSpaceBetween;
+    @include serviceLinkHead;
+    width: 100%;
+    .service-link {
+      @include serviceLink;
+    }
+  }
+}

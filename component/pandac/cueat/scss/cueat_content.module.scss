@@ -1,0 +1,14 @@
+@import "/styles/scss/pandac/pandac_common.module.scss";
+
+.cueat-content{
+	width: 1296px;
+	h3{
+		@include subH3;
+	}
+	p{
+		@include subText;
+	}
+	.image-box{
+		@include imgBox;
+	}
+}
