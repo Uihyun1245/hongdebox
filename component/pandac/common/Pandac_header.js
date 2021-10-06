@@ -4,7 +4,7 @@ const PandacHeader = () => {
   const menuList = [
     { menuName: "판다코퍼레이션", menuUrl: "/pandac/pandacorporation/" },
     { menuName: "큐잇", menuUrl: "/pandac/cueat/" },
-    { menuName: "옐로먼트", menuUrl: "/pandac/yellowment/" },
+    { menuName: "옐로먼트", menuUrl: "/pandac/yelloment/" },
     { menuName: "아그리파", menuUrl: "/pandac/agripa/" },
   ];
   const headerMenu = () => {

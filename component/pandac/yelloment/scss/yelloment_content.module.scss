@@ -1,0 +1,40 @@
+@import "/styles/scss/pandac/pandac_common.module.scss";
+
+.yelloment-content {
+  @include flexSpaceBetween;
+  align-items: flex-start;
+  width: 1296px;
+  margin-bottom: 224px;
+  .content-introduce {
+    width: 25%;
+    h3 {
+      font-size: 20px;
+      font-weight: $bold;
+      letter-spacing: -0.025em;
+      margin-bottom: 32px;
+    }
+    .text-group {
+      p {
+        font-size: 14px;
+        letter-spacing: -0.025px;
+        line-height: 24px;
+        color: #666666;
+      }
+    }
+  }
+  .contentImg-list {
+    @include flexCenter;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 75%;
+    img {
+      width: 30%;
+      margin-left: 32px;
+	  margin-bottom: 32px;
+	  object-fit: contain;
+    }
+    img:first-of-type {
+      margin-left: 0;
+    }
+  }
+}

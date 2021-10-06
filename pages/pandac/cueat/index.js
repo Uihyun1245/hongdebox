@@ -2,7 +2,7 @@ import PandacLayout from "../../../component/pandac/common/Pandac_layout";
 import PandacTopSection from "../../../component/pandac/common/Pandac_topSection";
 import PandacLinkBtn from "../../../component/pandac/common/Pandac_linkBtn";
 import CueatServiceLink from "../../../component/pandac/common/pandac_serviceLink";
-import CueatContent from  "../../../component/pandac/cueat/cueat_content";
+import CueatContent from  "../../../component/pandac/cueat/Cueat_content";
 import styles from "/styles/scss/pandac/cueat/cueat.module.scss";
 
 const Cueat = () => {
