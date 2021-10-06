@@ -1,4 +1,5 @@
 import PandacLayout from "/component/pandac/common/Pandac_layout";
+import PandacLinkBtn from "/component/pandac/common/Pandac_linkBtn";
 import PandacTopSection from "../../../component/pandac/common/Pandac_topSection";
 import PandacServiceLink from "../../../component/pandac/common/pandac_serviceLink";
 import YellomentIntroduce from "../../../component/pandac/yelloment/yelloment_introduce";
@@ -18,7 +19,7 @@ const Yelloment = () => {
       ],
       imgPath: "/images/pandac/yelloment/product",
       imgCnt: 6,
-	  imgType: "jpg"
+      imgType: "jpg",
     },
     {
       title: "라이브커머스",
@@ -28,7 +29,7 @@ const Yelloment = () => {
       ],
       imgPath: "/images/pandac/yelloment/yelloment_live",
       imgCnt: 6,
-	  imgType:"png"
+      imgType: "png",
     },
   ];
 
@@ -59,6 +60,11 @@ const Yelloment = () => {
       <YellomentIntroduce></YellomentIntroduce>
       <Content></Content>
       {/* <YellomentContent content={contentList[0]}></YellomentContent> */}
+      <PandacLinkBtn
+        link="https://yelloment.co.kr/"
+        text="옐로먼트 바로가기"
+        serviceName="yelloment"
+      ></PandacLinkBtn>
     </div>
   );
 };
