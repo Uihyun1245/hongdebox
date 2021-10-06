@@ -5,7 +5,7 @@ const CueatContent = ({ content }) => {
     const tmpList = [];
     for (let i = 0; i < imgCnt; i++) {
       tmpList.push(
-        <img
+        <img 
           src={`${imgPath}${i + 1}.jpg`}
           alt={`${imgTitle}${i + 1}`}
           key={`${imgTitle}${i}`}
