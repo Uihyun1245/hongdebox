@@ -2,7 +2,6 @@
 .linkBtn-container {
   @include vFlex;
   align-items: center;
-  margin-top: 160px;
   a {
     @include flexCenter;
     align-items: center;
