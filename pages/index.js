@@ -15,14 +15,14 @@ export default function Home() {
 
   return (
     <div className={styles["container"]}>
-      <button onClick={handlePost}>포스트 가져오기</button>
+      {/* <button onClick={handlePost}>포스트 가져오기</button>
       {posts.length!==0 && (
         <div>
           <p>{posts[0].id}</p>
           <p>{posts[0].title}</p>
           <p>{posts[0].author}</p>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
