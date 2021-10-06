@@ -6,7 +6,7 @@ import MainPandac from "/component/pandac/main/Main_pandac";
 import MainCueat from "/component/pandac/main/Main_cueat";
 import MainYelloment from "/component/pandac/main/Main_yelloment";
 import MainAgripa from "/component/pandac/main/Main_agripa";
-import styles from "/styles/scss/pandac/pandac_main.module.scss";
+import styles from "/styles/scss/pandac/pandac_common.module.scss";
 const PandacMain = () =>{
 	return(
 		<div className={styles["container"]}>

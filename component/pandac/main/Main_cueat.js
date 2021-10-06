@@ -64,8 +64,14 @@ const MainCueat = () => {
           <div className={styles["content-img"]}>
             <Swiper
               className={styles["cueat-swiper"]}
+              autoplay={{
+                delay: 1500,
+                disableOnInteraction: false,
+              }}
+              effect={"fade"}
+              loop={true}
               slidesPerView={1}
-              resistanceRatio={0} 
+              resistanceRatio={0}
               // spaceBetween={50}
               // onSlideChange={() => console.log("slide change")}
               // onSwiper={(swiper) => console.log(swiper)}

@@ -1,0 +1,40 @@
+@import "/styles/scss/pandac/pandac_common.module.scss";
+
+.agripa-introduce {
+  @include flexSpaceBetween;
+  width: 1296px;
+  margin: 64px 0 224px;
+  .introduce-text {
+    @include vFlex;
+    justify-content: space-between;
+    width: 50%;
+    height: 611px;
+    .introduce-title {
+		height: 50%;
+      h3 {
+        font-size: 20px;
+        font-weight: $bold;
+        line-height: 36px;
+        height: 25%;
+        letter-spacing: -0.025em;
+		margin-bottom: 64px;
+      }
+      p {
+        width: 120ch;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: $regular;
+        color: $textColor;
+        height: 25%;
+        letter-spacing: -0.025em;
+      }
+    }
+  }
+  .introduce-img {
+    width: 50%;
+    img {
+      width: 644px;
+      height: 611px;
+    }
+  }
+}

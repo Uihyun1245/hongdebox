@@ -1,0 +1,40 @@
+@import "/styles/scss/pandac/pandac_common.module.scss";
+
+.agripa-content {
+  @include flexSpaceBetween;
+  align-items: flex-start;
+  margin-bottom: 124px;
+  width: 1296px;
+  .content-introduce {
+    width: 30%;
+    h3 {
+      font-size: 20px;
+      font-weight: $bold;
+      letter-spacing: -0.025em;
+      margin-bottom: 32px;
+    }
+    .text-group {
+      p {
+        font-size: 14px;
+        letter-spacing: -0.025px;
+        line-height: 24px;
+        color: #666666;
+      }
+    }
+  }
+  .contentImg-list {
+    @include flexCenter;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include flexSpaceBetween;
+    margin-bottom: 32px;
+	width: 50%;
+    img {
+      width: 300px;
+      margin-left: 32px;
+    }
+    img:first-of-type {
+      margin-left: 0;
+    }
+  }
+}
