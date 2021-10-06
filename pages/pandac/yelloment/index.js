@@ -2,7 +2,7 @@ import PandacLayout from "/component/pandac/common/Pandac_layout";
 import PandacLinkBtn from "/component/pandac/common/Pandac_linkBtn";
 import PandacTopSection from "../../../component/pandac/common/Pandac_topSection";
 import PandacServiceLink from "../../../component/pandac/common/pandac_serviceLink";
-import YellomentIntroduce from "../../../component/pandac/yelloment/yelloment_introduce";
+import YellomentIntroduce from "../../../component/pandac/yelloment/Yelloment_introduce";
 import YellomentContent from "../../../component/pandac/yelloment/Yelloment_content";
 import styles from "/styles/scss/pandac/pandac_common.module.scss";
 const Yelloment = () => {
