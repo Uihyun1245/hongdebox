@@ -6,7 +6,7 @@ import styles from "/styles/scss/pandac/pandac_common.module.scss";
 const Pandac = (props) => {
   return (
     <div className={styles["wrapper"]}>
-      {props.device? (
+      {props.device === "mobile" ? (
         <MobilePandacMAin></MobilePandacMAin>
       ) : (
         <PandacMain></PandacMain>
