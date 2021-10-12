@@ -6,13 +6,14 @@ import counter from './counter/counter';
 import todos from './Todos/todos'
 import toggleIcon from './common/toggleIcon';
 import headerSearch from './insta/header/search'
-
+import deviceDetect from './common/device_detect';
 const rootReducer = combineReducers({
 	counter,
 	todos,
 	toggleIcon,
 	headerSearch,
 	apiTest,
+	deviceDetect,
 })
 
 export function* rootSaga(){
