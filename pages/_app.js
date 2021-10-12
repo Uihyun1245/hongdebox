@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import rootReducer, { rootSaga } from "../module/rootReducer";
 import SideBarContainer from "../component/common/sidebar/SidebarMenu_container";
-import { DeviceCheck } from "../utils/common/DeviceCheck";
+import { DeviceCheck } from "../utils/common/deviceCheck";
 import "../styles/globals.css";
 
 applyMiddleware;
