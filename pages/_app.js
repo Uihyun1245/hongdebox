@@ -24,15 +24,20 @@ const configureStore = () => {
 
 function MyApp({ Component, pageProps }) {
   const pageProperty = DeviceCheck(pageProps);
-
-  const getLayout = Component.Layout ? (
-    <Component.Layout>
-      <Component {...pageProperty} />
-    </Component.Layout>
-  ) : (
-    <Component {...pageProperty}></Component>
-  );
-
+  const getLayout = () => {
+    if (Component.Layout && pageProperty.device) {
+      const Layout = Component.Layout[pageProperty.device];
+      return Layout ? (
+        <Layout>
+          <Component {...pageProperty}></Component>
+        </Layout>
+      ) : (
+        <Component {...pageProperty}></Component>
+      );
+    } else {
+      return <Component {...pageProperty}></Component>;
+    }
+  };
   return (
     <div className="wrapper">
       <Provider store={configureStore()}>
@@ -41,7 +46,7 @@ function MyApp({ Component, pageProps }) {
         ) : (
           <MobileSideBarContainer></MobileSideBarContainer>
         )}
-        {getLayout}
+        {getLayout()}
       </Provider>
     </div>
   );

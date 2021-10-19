@@ -2,7 +2,8 @@ import SidebarMenu from "./M_SidebarMenu";
 import M_ToggleIcon from "../M_ToggleIcon";
 import styles from "./scss/m_sideBarMenu_container.module.scss";
 import { useSelector, useDispatch } from "react-redux";
-import { toggle, setCurrentMenu } from "../../../module/common/toggleIcon";
+import { toggle, setCurrentMenu ,getToggleState } from "../../../module/common/toggleIcon";
+import { useState } from "react";
 const MobileSideBarContainer = () => {
   const dispatch = useDispatch();
   const sideMenuList = [
@@ -12,18 +13,27 @@ const MobileSideBarContainer = () => {
     { id: 4, menuName: "Instagram Cloning", url: "/insta" },
     { id: 5, menuName: "Pandac Coperation", url: "/pandac" },
   ];
-  // const [currentMenu, setcurrentMenu] = useState(1);
 
   const sideBarActive = useSelector((state) => {
     return state.toggleIcon.active;
   });
+  const test = useSelector((state) => {
+    console.log(state.toggleIcon);
 
-  const handleToggle = (id) => {
-    dispatch(toggle());
+    const index = state.toggleIcon.findIndex(
+      (obj) => obj.toggleName == toggleId
+    );
+    console.log(index);
+    console.log(state.toggleIcon[index]['active']);
+    return state.toggleIcon.active;
+  });
+const [toggleId, setTargetId] = useState();
+  const handleToggle = (e,id) => {
+    dispatch(toggle(e.target.id));
     if(typeof id == 'number'){
       dispatch(setCurrentMenu(id));
-
     }
+    setTargetId(e.target.id);
   };
 
   return (
@@ -33,9 +43,9 @@ const MobileSideBarContainer = () => {
       }`}
     >
       <M_ToggleIcon
-        id="sideMenu-toggle"
+        id="m-sideMenu-toggle"
         sideBarActive={sideBarActive}
-        handleToggle={handleToggle}
+        handleToggle={(e)=>handleToggle(e)}
       ></M_ToggleIcon>
       {sideMenuList.map((sideMenu) => (
         <SidebarMenu

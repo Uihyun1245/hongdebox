@@ -1,0 +1,52 @@
+@import "/styles/scss/pandac/m_pandac_common.module.scss";
+
+.header {
+  @include vFlexAlignCenter;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid $borderColor;
+  background-color: #fefefe;
+  z-index: 2;
+  .header-container {
+    @include flexSpaceBetween;
+    width: 320px;
+    .logo-container {
+      img {
+        width: 120px;
+        height: 34px;
+        object-fit: contain;
+      }
+    }
+    .menu-btn {
+      @include flexAlignCenter;
+      img {
+        width: 25px;
+        height: 20px;
+      }
+    }
+  }
+  .menu-container {
+    .menu-list {
+      @include vFlex;
+      position: absolute;
+      top: 60px;
+      left: 0px;
+      width: 100%;
+      height: 100vh;
+      background-color: #fafafa;
+      transform: translate(0%, 0);
+      transition: transform 0.2s ease-in-out;
+      padding: 20%;
+      text-align: center;
+      li {
+        font-size: 20px;
+        font-weight: $bold;
+        margin: 16px 0;
+      }
+    }
+  }
+}
