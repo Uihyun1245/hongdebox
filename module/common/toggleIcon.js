@@ -1,5 +1,4 @@
 const TOGGLE_MENU = "toggle/TOGGLE_MENU";
-const GET_TOGGLE_STATE = "toggle/GET_TOGGLE_STATE";
 const CURRENT_MENU = "toggle/CURRENT_MENU";
 const MENU_CLOSE = "toggle/MENU_CLOSE";
 export const toggle = (name) => ({
@@ -13,55 +12,36 @@ export const setCurrentMenu = (id) => ({
 });
 
 export const menuClose = () => ({
-  type: MENU_CLOSE,s
-});
-export const getToggleState = (name) => ({
-  type: GET_TOGGLE_STATE,
-  toggleName: name,
+  type: MENU_CLOSE,
 });
 
-const initalState = [
-  {
-    toggleName: "",
-    active: false,
-  },
-  {
-    toggleName: "",
-    active: false,
-  },
-];
+const initalState = {};
 
 const toggleMenu = (state = initalState, action) => {
+  const toggleList = Object.keys(state);
   switch (action.type) {
     case TOGGLE_MENU:
-      const index = state.findIndex(
-        (obj) => obj.toggleName == action.toggleName
-      );
-      if (index === -1) {
-        return [
-          ...state,
-          {
-            toggleName: action.toggleName,
-            active: true,
-          },
-        ];
-      } else {
-        state[index] = {
-          toggleName: action.toggleName,
-          active: !state[index]["active"],
+      if (toggleList.includes(action.toggleName)) {
+        state[action.toggleName] = {
+          ...state[action.toggleName],
+          active: !state[action.toggleName].active,
         };
-        return state;
+      } else {
+        state[action.toggleName] = {
+          ...state[action.toggleName],
+          active: true,
+        };
       }
+      return state;
+
     case MENU_CLOSE:
-      return {
-        ...state,
-        active: false,
-      };
-    case GET_TOGGLE_STATE:
-      const toggleIndex = state.findIndex(
-        (obj) => obj.toggleName == action.toggleName
-      );
-      return state[toggleIndex]["active"];
+      if (toggleList.includes(action.toggleName)) {
+        state[action.toggleName] = {
+          ...state[action.toggleName],
+          active: false,
+        };
+      }
+      return state;
     default:
       return state;
   }

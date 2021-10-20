@@ -3,6 +3,8 @@ import ToggleIcon from "../ToggleIcon";
 import styles from "./scss/sideBarMenu_container.module.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { toggle, setCurrentMenu } from "../../../module/common/toggleIcon";
+import { useState } from "react";
+
 const SideBarContainer = () => {
   const dispatch = useDispatch();
   const sideMenuList = [
@@ -15,34 +17,35 @@ const SideBarContainer = () => {
   // const [currentMenu, setcurrentMenu] = useState(1);
 
   const sideBarActive = useSelector((state) => {
-    return state.toggleIcon.active;
+    return state.toggleIcon;
   });
+  const [active, setActive] = useState(false);
 
-  const handleToggle = (id) => {
-    dispatch(toggle());
-    if(typeof id == 'number'){
+  const handleToggle = (e, id) => {
+    dispatch(toggle(e.target.id));
+    if (typeof id == "number") {
       dispatch(setCurrentMenu(id));
-
     }
+    setActive(sideBarActive[e.target.id].active);
   };
 
   return (
     <div
       className={`${styles["side-bar"]} ${
-        sideBarActive ? styles["sideBar-active"] : ""
+        active ? styles["sideBar-active"] : ""
       }`}
     >
       <ToggleIcon
         id="sideMenu-toggle"
-        sideBarActive={sideBarActive}
-        handleToggle={handleToggle}
+        sideBarActive={active}
+        handleToggle={(e) => handleToggle(e)}
       ></ToggleIcon>
       {sideMenuList.map((sideMenu) => (
         <SidebarMenu
           menuName={sideMenu.menuName}
           url={sideMenu.url}
           styles={styles}
-          handleToggle={()=>handleToggle(sideMenu.id)}
+          handleToggle={() => handleToggle(sideMenu.id)}
           key={`sideMenu${sideMenu.id}`}
         ></SidebarMenu>
       ))}

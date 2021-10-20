@@ -2,7 +2,10 @@ import SidebarMenu from "./M_SidebarMenu";
 import M_ToggleIcon from "../M_ToggleIcon";
 import styles from "./scss/m_sideBarMenu_container.module.scss";
 import { useSelector, useDispatch } from "react-redux";
-import { toggle, setCurrentMenu ,getToggleState } from "../../../module/common/toggleIcon";
+import {
+  toggle,
+  setCurrentMenu,
+} from "../../../module/common/toggleIcon";
 import { useState } from "react";
 const MobileSideBarContainer = () => {
   const dispatch = useDispatch();
@@ -15,44 +18,33 @@ const MobileSideBarContainer = () => {
   ];
 
   const sideBarActive = useSelector((state) => {
-    return state.toggleIcon.active;
+    return state.toggleIcon;
   });
-  const test = useSelector((state) => {
-    console.log(state.toggleIcon);
-
-    const index = state.toggleIcon.findIndex(
-      (obj) => obj.toggleName == toggleId
-    );
-    console.log(index);
-    console.log(state.toggleIcon[index]['active']);
-    return state.toggleIcon.active;
-  });
-const [toggleId, setTargetId] = useState();
-  const handleToggle = (e,id) => {
+  const [active, setActive] = useState(false);
+  const handleToggle = (e, id) => {
     dispatch(toggle(e.target.id));
-    if(typeof id == 'number'){
+    if (typeof id == "number") {
       dispatch(setCurrentMenu(id));
     }
-    setTargetId(e.target.id);
+    setActive(sideBarActive[e.target.id].active);
   };
-
   return (
     <div
       className={`${styles["side-bar"]} ${
-        sideBarActive ? styles["sideBar-active"] : ""
+        active ? styles["sideBar-active"] : ""
       }`}
     >
       <M_ToggleIcon
         id="m-sideMenu-toggle"
-        sideBarActive={sideBarActive}
-        handleToggle={(e)=>handleToggle(e)}
+        sideBarActive={active}
+        handleToggle={(e) => handleToggle(e)}
       ></M_ToggleIcon>
       {sideMenuList.map((sideMenu) => (
         <SidebarMenu
           menuName={sideMenu.menuName}
           url={sideMenu.url}
           styles={styles}
-          handleToggle={()=>handleToggle(sideMenu.id)}
+          handleToggle={() => handleToggle(sideMenu.id)}
           key={`sideMenu${sideMenu.id}`}
         ></SidebarMenu>
       ))}
