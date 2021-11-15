@@ -1,4 +1,4 @@
-import MobileMainIntro from "./M_main_intro";
+import MobileMainIntro from "./M_Main_intro";
 import MobileMainBanner from "./M_Main_banner";
 import MobileMainService from "./M_Main_service";
 import MobileMainPandac from "./M_Main_pandac";
