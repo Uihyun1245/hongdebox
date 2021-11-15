@@ -1,0 +1,50 @@
+@import "/styles/scss/pandac/m_pandac_common.module.scss";
+
+.footer {
+  @include vFlex;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid $borderColor;
+  .footer-container {
+    width: 320px;
+    .footer-links {
+      padding: 24px 0 16px;
+      border-bottom: 1px solid $borderColor;
+      .footer-company-logo {
+        img {
+          width: 120px;
+          height: 34px;
+          object-fit: contain;
+        }
+      }
+      .footer-links {
+        ul {
+          display: flex;
+          justify-content: flex-start;
+          li {
+            margin-right: 8px;
+            a {
+              @include text;
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+    .footer-company-info {
+      padding: 48px 0;
+      border-bottom: 1px solid $borderColor;
+      p {
+        @include text;
+        font-size: 10px;
+      }
+    }
+    .footer-copyright {
+      padding: 36px 0;
+      p {
+        @include text;
+        font-size: 10px;
+      }
+    }
+  }
+}

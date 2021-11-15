@@ -1,0 +1,7 @@
+@import '/styles/scss/pandac/m_pandac_common.module.scss';
+
+
+.mobile-main{
+	@include vFlexCenter;
+	width: 100%;
+}

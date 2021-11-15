@@ -1,0 +1,21 @@
+@import '/styles/scss/pandac/m_pandac_common.module.scss';
+
+
+.banner-section {
+	background-color: #ecfffd;
+	text-align: center;
+	width: 100%;
+	padding: 72px 0;
+	p {
+	  @include text;
+	  font-size: 14px;
+	  font-weight: $medium;
+	  color: #333333;
+	  strong {
+		@include strong;
+		display: inline-block;
+	  }
+	}
+  }
+
+  

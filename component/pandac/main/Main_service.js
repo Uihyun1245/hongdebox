@@ -93,7 +93,7 @@ const MainService = () => {
             </div>
             <div className={styles["serviceBox-footer"]}>
               <div className={styles["serviceBox-img"]}>
-                <img src="/images/pandac/main/agripa.png" alt="아그리파 로고" />
+                <img src="/images/pandac/main/agripa_logo.png" alt="아그리파 로고" />
               </div>
               <div className={styles["serviceBox-link"]}>
                 <a href="http://agripa.kr/" target="_blank">

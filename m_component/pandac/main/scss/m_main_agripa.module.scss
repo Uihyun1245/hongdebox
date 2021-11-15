@@ -1,0 +1,45 @@
+@import "/styles/scss/pandac/m_pandac_common.module.scss";
+
+.agripa-section {
+  @include vFlex;
+  @include section;
+  align-items: center;
+  border-top: 1px solid $borderColor;
+  padding-top: 0;
+  .section-title {
+    @include sectionTitle($agripaColor);
+    span {
+      font-size: 16px;
+    }
+  }
+  .section-body {
+    text-align: center;
+    .text-group {
+      p {
+        @include text;
+        font-size: 12px;
+        margin-bottom: 4px;
+      }
+    }
+  }
+  .agripa-link {
+    @include linkBtn($agripaColor);
+    margin-top: 48px;
+    a {
+      width: 165px;
+    }
+  }
+  .agripa-subSwiper {
+    .swiper-wrapper {
+      width: 240px;
+      .swiper-slide {
+        @include flexCenter;
+        img {
+          width: 187px;
+          height: 392px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}

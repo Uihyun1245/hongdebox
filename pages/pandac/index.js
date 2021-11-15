@@ -12,7 +12,7 @@ const Pandac = (props) => {
   };
   
   return (
-    <div className={styles["wrapper"]}>
+    <div className={styles["container"]}>
       {props.device === "mobile" ? (
         <MobilePandacMAin></MobilePandacMAin>
       ) : (
